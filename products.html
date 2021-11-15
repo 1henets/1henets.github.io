@@ -63,22 +63,76 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column has-text-centered">
-				<span class="icon is-large title">
-					<i class="fa fa-medkit" aria-hidden="true"></i>
-				</span>
-				<h2 class="title">NEET</h2>
+				<button class="title button modal-button is-white" data-target="#neetModal" aria-haspopup="true"><i class="fa fa-medkit" aria-hidden="true"></i>&nbsp;&nbsp;NEET</button>
+				<div class="modal" id="neetModal">
+					  <div class="modal-background"></div>
+					  <div class="modal-card">
+					    <header class="modal-card-head">
+					      <p class="modal-card-title">NEET</p>
+					      <button class="delete modal-close" aria-label="close"></button>
+					    </header>
+					    <section class="modal-card-body">
+					    	<div class="content is-medium">
+						      <ol type="I">
+						      	<li>Daily Practice Papers - We offer customized DPP according to your needs.</li>
+						      	<li>Test Series - Our test series includes individual units as well as complete mock test.</li>
+						      	<li>Study Materials - Your perfect partner to crack the exam.</li>
+						      </ol>
+					    </div>
+					    </section>
+					    <footer class="modal-card-foot">
+					      <button class="button is-success">Download Samples</button>
+					    </footer>
+					  </div>
+					</div>
+			</div>
+		<div class="column has-text-centered">
+				<button class="title button modal-button is-white" data-target="#jeeModal" aria-haspopup="true"><i class="fa fa-flask" aria-hidden="true"></i>&nbsp;&nbsp;JEE</button>
+				<div class="modal" id="jeeModal">
+					  <div class="modal-background"></div>
+					  <div class="modal-card">
+					    <header class="modal-card-head">
+					      <p class="modal-card-title">JEE</p>
+					      <button class="delete modal-close" aria-label="close"></button>
+					    </header>
+					    <section class="modal-card-body">
+					    	<div class="content is-medium">
+						      <ol type="I">
+						      	<li>Daily Practice Papers - We offer customized DPP according to your needs.</li>
+						      	<li>Test Series - Our test series includes individual units as well as complete mock test.</li>
+						      	<li>Study Materials - Your perfect partner to crack the exam.</li>
+						      </ol>
+					    </div>
+					    </section>
+					    <footer class="modal-card-foot">
+					      <button class="button is-success">Download Samples</button>
+					    </footer>
+					  </div>
+					</div>
 		</div>
 		<div class="column has-text-centered">
-				<span class="icon is-large title">
-					<i class="fa fa-flask" aria-hidden="true"></i>
-				</span>
-				<h2 class="title">JEE</h2>
-		</div>
-		<div class="column has-text-centered">
-				<span class="icon is-large title">
-					<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-				</span>
-				<h2 class="title">Foundation</h2>
+				<button class="title button modal-button is-white" data-target="#foundationModal" aria-haspopup="true"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;Foundation</button>
+				<div class="modal" id="foundationModal">
+					  <div class="modal-background"></div>
+					  <div class="modal-card">
+					    <header class="modal-card-head">
+					      <p class="modal-card-title">Foundation (Class XI and XII)</p>
+					      <button class="delete modal-close" aria-label="close"></button>
+					    </header>
+					    <section class="modal-card-body">
+					    	<div class="content is-medium">
+						      <ol type="I">
+						      	<li>ExamPoint - The only book you'll ever need to get through boards.</li>
+						      	<li>Test Series - Our test series includes individual units as well as complete mock test.</li>
+						      	<li>Study Materials - Your perfect partner to crack the exam.</li>
+						      </ol>
+					    </div>
+					    </section>
+					    <footer class="modal-card-foot">
+					      <button class="button is-success">Download Samples</button>
+					    </footer>
+					  </div>
+					</div>
 		</div>
 	</div>
 	</div>
@@ -96,5 +150,18 @@
 		</div>
 	</div>
 </footer>
+<script>
+document.querySelectorAll('.modal-button').forEach(function(el) {
+  el.addEventListener('click', function() {
+    var target = document.querySelector(el.getAttribute('data-target'));
+    
+    target.classList.add('is-active');
+    
+    target.querySelector('.modal-close').addEventListener('click',   function() {
+        target.classList.remove('is-active');
+     });
+  });
+});
+</script>
 </body>
 </html>
